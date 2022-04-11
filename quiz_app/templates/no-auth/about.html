@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block context %}
+{% if not user.is_authenticated %}
+<style>
+    body {
+        background-color: rgba(80, 95, 95, 0.144);
+    }
+</style>
+<div class="next_nav">
+    <div class="container">
+        <p class="about_h2">About</p>
+    </div>
+</div>
+<div class="row about_row">
+    <div class="col">
+        <img src="{% static 'img/main2.jpg' %}" alt="About image">
+    </div>
+    <div class="col">
+        <h2>about online quiz system</h2>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim sunt hic facere fugit nulla non animi ea possimus voluptate aliquam perferendis qui, magni quaerat itaque impedit, necessitatibus rerum sit illum explicabo. Minima at nobis fugiat nemo deleniti dolor, dolore saepe praesentium expedita velit nihil rerum asperiores debitis voluptatem veniam ab non nulla, quia quam. Harum, culpa similique totam doloremque suscipit vitae eum, tenetur cupiditate obcaecati unde distinctio qui numquam incidunt dolor.</p>
+    </div>
+</div>
+{% else %}
+<div class="container">
+    <div class="alert alert-danger mt-2" role="alert">
+        This url didn't open for you
+      </div>
+</div>
+{% endif %}
+{% endblock %}

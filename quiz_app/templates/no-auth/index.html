@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block context %}
+<div class="container">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img src="{% static 'img/main1.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="{% static 'img/main2.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="{% static 'img/main.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+<br>
+</div>
+<div class="container">
+    <section class="main_sistem">
+        <h1 class="text-center">Online Quiz System</h1>
+        <div class="row">
+            <div class="col-sm">
+                &nbsp; &nbsp; <img src="{% static 'img/main.jpg' %}" width="70" alt="Main img">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae facere, eveniet pariatur velit
+                    adipisci
+                    similique perferendis officia. Esse ullam ad possimus magnam nam architecto expedita eum suscipit
+                    distinctio
+                    non eveniet nemo quibusdam est laudantium, ipsa consequuntur voluptatem soluta? Numquam, culpa.</p>
+            </div>
+            <div class="col-sm">
+                &nbsp; &nbsp; <img src="{% static 'img/main.jpg' %}" width="70" alt="Main img">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae facere, eveniet pariatur velit
+                    adipisci
+                    similique perferendis officia. Esse ullam ad possimus magnam nam architecto expedita eum suscipit
+                    distinctio
+                    non eveniet nemo quibusdam est laudantium, ipsa consequuntur voluptatem soluta? Numquam, culpa.</p>
+            </div>
+            <div class="col-sm">
+                &nbsp; &nbsp; <img src="{% static 'img/main.jpg' %}" width="70" alt="Main img">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae facere, eveniet pariatur velit
+                    adipisci
+                    similique perferendis officia. Esse ullam ad possimus magnam nam architecto expedita eum suscipit
+                    distinctio
+                    non eveniet nemo quibusdam est laudantium, ipsa consequuntur voluptatem soluta? Numquam, culpa.</p>
+            </div>
+        </div>
+    </section>
+</div>
+<div class="container-xxl">
+    <hr>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-4 text-center">
+            <img src="{% static 'img/main2.jpg' %}" width="100%" alt="Main img">
+        </div>
+        <div class="col-8  text-center">
+            <h2 class="about_h2">About online quiz system</h2>
+            <hr>
+            <p class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae cupiditate id
+                deleniti quis quos
+                voluptatibus magni, dolorum iusto, rerum quo voluptate laborum quibusdam facilis molestiae saepe,
+                eveniet numquam. Cumque porro facilis dicta accusantium fugiat eos magnam consequuntur, eveniet
+                necessitatibus expedita excepturi placeat ipsam cupiditate dolor saepe quam labore? Repudiandae, harum?
+            </p>
+        </div>
+    </div>
+</div>
+<br>
+{% endblock %}

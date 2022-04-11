@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base.html</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="main_nav">
+
+        {% if user.is_authenticated %}
+        <!--  -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100">&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="navbar-brand" href="#">ONLINE QUIZ SYSTEM</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Administrator
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Reports
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            My Account
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Welcome admin admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--  -->
+        {% endif %}
+        {% if not user.is_authenticated %}
+        <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100">&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="navbar-brand" href="{% url 'indexView' %}">ONLINE QUIZ SYSTEM</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'indexView' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'aboutView' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contactView' %}">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'studentLoginView' %}">Student login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'tutorLoginView' %}">Tutor login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        {% endif %}
+    </div>
+
+    {% block context %}
+
+    {% endblock %}
+    <div class="footer">
+        <div class="container-xl">
+            <div class="row">
+                <div class="col line-height">
+                    <span class="fw-600 white mt-3">CONTACT INFO</span><br>
+                    <span class="white">Naymanobod 109</span><br>
+                    <span><a href="mailto: najmiddinweb@gmail.com">My@gmail.com</a></span><br>
+                    <span><a href="tel: +998997663681">spanhone-997663681</a></span><br>
+                    <span class="white mb-4">City:- Andijan</span><br>
+                </div>
+                <div class="col line-height">
+                    <span class="fw-600 white mt-3">MODULES</span><br>
+                    <span><a href="#">>Question Module</a></span><br>
+                    <span><a href="#">>User Module</a></span><br>
+                    <span><a href="#">>Tutor Module</a></span><br>
+                    <span><a href="#">>Login Module</a></span><br>
+                    <span><a href="#">>Quiz Module</a></span><br>
+                    <br>
+                </div>
+                <div class="col line-height">
+                    <span class="fw-600 white mt-3">ROJECT LINK</span><br>
+                    <span><a href="#">>Home</a></span><br>
+                    <span><a href="#">>About Us</a></span><br>
+                    <span><a href="#">>Contact</a></span><br>
+                    <span><a href="#">>Login</a></span><br>
+                    <span><a href="#">>Email Us</a></span><br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+
+</html>

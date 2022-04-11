@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block context %}
+{% if not user.is_authenticated %}
+
+<div class="next_nav">
+    <div class="container">
+        <p class="about_h2">Contact</p>
+    </div>
+</div>
+<div class="row contact_row">
+    <div class="col-4">
+        <div class="contact_left adress">
+            <h4>address</h4>
+            <p>Uzbekistan</p>
+            <p>City: Andijan</p>
+            <p>Pin code: 170100</p>
+        </div>
+        <div class="contact_left bussinsess_hour">
+            <h4>bussiness hour</h4>
+            <p>Monday to Saturday</p>
+            <p>10:00 to 4:00</p>
+            <p>Lunch hour: 1:00 to 1:45</p>
+            <p>Sunday close</p>
+        </div>
+        <div class="contact_left telephone">
+            <h4>telephone</h4>
+            <p>+998997663681</p>
+            <p>+998997663681</p>
+            <p>+998997663681</p>
+        </div>
+    </div>
+    <div class="col">
+        <h6>Drop us a line so that we can hear from you</h6>
+        <label for="name"><h6>Name</h6></label><br>
+        <input id="name" type="text"><br>
+        <label for="email"><h6>Email</h6></label><br>
+        <input id="email" type="text"><br>
+        <label for="phone"><h6>Phone</h6></label><br>
+        <input id="phone" type="text"><br>
+        <label for="message"><h6>Message</h6></label><br>
+        <input id="message" type="text"><br>
+        <button class="submit" type="submit">Submit</button>
+    </div>
+</div>
+{% else %}
+<div class="container">
+    <div class="alert alert-danger mt-2" role="alert">
+        This url didn't open for you
+      </div>
+</div>
+{% endif %}
+{% endblock %}

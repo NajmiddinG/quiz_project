@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block context %}
+
+<div class="container dashboard-container">
+    <div class="row">
+        <div class="col main-col">
+            <div class="mainbc">
+                <a href="//"><p class="mainwhite">Add Topics</p></a>
+            </div>
+        </div>
+        <div class="col main-col">
+            <div class="mainbc">
+                <a href="//"><p class="mainwhite">Add Course</p></a>
+            </div>
+        </div>
+        <div class="col main-col">
+            <div class="mainbc">
+                <a href="//"><p class="mainwhite">Add Questions</p></a>
+            </div>
+        </div>
+        <div class="col main-col">
+            <div class="mainbc">
+                <a href="//"><p class="mainwhite">Add Users</p></a>
+            </div>
+        </div>
+        <div class="col main-col">
+            <div class="mainbc">
+                <a href="//"><p class="mainwhite">Tutors Report</p></a>
+            </div>
+        </div>
+        <div class="col main-col">
+            <div class="mainbc">
+                <a href="//"><p class="mainwhite">Studets Report</p></a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col main-col">
+            <div class="mainbc">
+                <a href="//"><p class="mainwhite">Questions report</p></a>
+            </div>
+        </div>
+        <div class="col main-col">
+            <div class="mainbc">
+                <a href="//"><p class="mainwhite">Results Report</p></a>
+            </div>
+        </div>
+        <div class="col main-col">
+            <div class="mainbc">
+                <a href="//"><p class="mainwhite">Topics Report</p></a>
+            </div>
+        </div>
+        <div class="col main-col">
+            <div class="mainbc">
+                <a href="//"><p class="mainwhite">My Account</p></a>
+            </div>
+        </div>
+        <div class="col main-col">
+            <div class="mainbc">
+                <a href="//"><p class="mainwhite">Change Password</p></a>
+            </div>
+        </div>
+        <div class="col main-col">
+            <div class="mainbc">
+                <a href="//"><p class="mainwhite">Logogut</p></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% if not user.is_authenticated %}
+Hello
+{% else %}
+<div class="container">
+    <div class="alert alert-danger mt-2" role="alert">
+        This url didn't open for you
+      </div>
+</div>
+{% endif %}
+{% endblock %}

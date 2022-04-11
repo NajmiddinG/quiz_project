@@ -1,0 +1,243 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+nav {
+    z-index: 100;
+}
+.main_nav {
+    padding-bottom: 60px;
+}
+.main_img {
+    margin: 1% auto;
+}
+.main_sistem {
+    display: inline-block;
+}
+.main_p {
+    font-size: 700%;
+    margin: 8% auto;
+    color: rgb(170, 51, 51);
+    line-height: 85px;
+}
+.quiz_contest_img {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: black;
+}
+.quiz_contest_img_ {
+    background-color: rgb(165, 42, 144);
+}
+.quiz_contest_img_p {
+    margin: 10% auto;
+    font-size: 70px;
+    font-weight: 900;
+    color: rgb(238, 150, 17);
+    line-height: 50px;
+}
+.p_span_1 {
+    font-size: 40px;
+}
+.img_fluid {
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: rgb(42, 88, 94);
+}
+.about_h2 {
+    text-transform: uppercase;
+}
+.fw-600 {
+    font-weight: 600;
+}
+.white {
+    color: rgb(196, 194, 194);
+}
+.line-height > p {
+    height:7px;
+}
+a {
+    text-decoration: none;
+}
+/* Footer */
+
+/* Tutor login */
+.tutor_row {
+    margin-block: 20px;
+}
+.next_nav {
+    background-color: rgb(42, 88, 94);
+    height: 50px;
+    margin-top: -4px;
+}
+.about_h2 {
+    font-size: 18px;
+    font-weight: 600;
+    padding-block: 10px;
+    padding-inline: 12%;
+    color: white;
+}
+.tutor_login_main {
+    margin: 0 auto;
+    background-color: rgba(78, 82, 79, 0.253);
+    border-radius: 5px;
+}
+.tutor_div {
+    background-color: rgb(27, 60, 65);
+    margin: 10px 10%;
+}
+.tutor_div > p {
+    font-size: 16px;
+    padding-block: 10px;
+    padding-inline: 12%;
+    color: white;
+    text-transform: uppercase;
+}
+.tutor_login_main > input {
+    margin: 10px auto;
+    width: 70%;
+    height: 15%;
+}
+.tutor_button_1 {
+    border: 0;
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    background-color: transparent;
+}
+.tutor_button_1:active>.tutor_div2 {
+    background-color: blue;
+}
+
+.tutor_div2 {
+    background-color: rgb(27, 60, 65);
+}
+.tutor_div2 > p {
+    font-size: 16px;
+    padding-block: 10px;
+    padding-inline: 12%;
+    color: white;
+    text-transform: uppercase;
+}
+/* Tutor login */
+/* Main Panel */
+.dashboard-container .row .main-col {
+    border: 1px solid rgb(44, 42, 42);
+    height: 10rem;
+    margin: -0.50px;
+}
+.dashboard-container .row .main-col .mainbc {
+    background-color: rgb(42, 88, 94);
+    border-radius: 50%;
+    margin: 10%;
+    height: 80%;
+    position: relative;
+}
+.mainwhite {
+    color: white;
+}
+.dashboard-container .row .main-col .mainbc a>p {
+    padding: 50%;
+    z-index: 1;
+}
+/* About */
+.about_row {
+    margin: 4% auto;
+    width: 75%;
+}
+.about_row h2 {
+    text-transform: uppercase;
+}
+/* Contact */
+.contact_row {
+    width: 80%;
+    margin: 30px auto;
+    background-color: rgba(80, 95, 95, 0.144);
+}
+.contact_row .col-4 {
+    margin: 0 0 0 20px;
+    width: 25%;
+}
+.contact_row h4, .contact_row h6, .contact_row h3 {
+    text-transform: uppercase;
+}
+.contact_row .col-4 p {
+    height: 5px;
+}
+.contact_row .col-4 div {
+    margin-block: 20px;
+    padding: 4px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+.contact_row .col {
+    padding: 30px 5px;
+}
+.contact_row .col input {
+    outline: none;
+    width: 60%;
+}
+.contact_row .col label h6 {
+    text-transform: capitalize;
+}
+.contact_row button {
+    background-color: rgb(42, 88, 94);
+    border: 1px solid rgba(0, 0, 0, 0.445);
+    border-radius: 3px;
+    width: 12%;
+    color: white;
+    margin: 20px 20%;
+    padding: 6px;
+}
+/* Student login */
+
+.student_button_1 {
+    border: 0;
+    width: 80%;
+    padding-top: 10px;
+    background-color: transparent;
+}
+.student_button_1:active>.student_div {
+    background-color: blue;
+}
+.tutor_login_main input {
+    padding-inline: 2rem;
+}
+
+.student_div {
+    background-color: rgb(27, 60, 65);
+}
+.student_div > p {
+    font-size: 16px;
+    padding-block: 10px;
+    padding-inline: 12%;
+    color: white;
+    text-transform: uppercase;
+}
+.student_login a:hover {
+    text-decoration: underline;
+}
+/* .student_register {
+    width: 70%;
+    margin: 1.5% auto;
+} */
+.student_register label {
+    font-size: 16px;
+    font-weight: 500;
+}
+.student_register hr {
+    width: 50%;
+}
+.student_register .student_details {
+    padding: 15px;
+}
+.student_register .form-group {
+    padding-block: 5px;
+}
+.student_register .form-group input {
+    height: 45px;
+}

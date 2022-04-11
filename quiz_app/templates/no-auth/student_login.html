@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block context %}
+{% if not user.is_authenticated %}
+<form action="">
+    {% csrf_token %}
+    <div class="next_nav">
+        <div class="container">
+            <p class="about_h2">Student login</p>
+        </div>
+    </div>
+    <div class="row tutor_row student_login">
+        <div class="col-9 tutor_login_main text-center">
+            <div class="tutor_div">
+                <p class="text-center">Login to your account</p>
+            </div>
+            <input type="text" placeholder="User Id"><br>
+            <input type="text" placeholder="Password">
+            <button type="submit" class="student_button_1">
+                <div class="student_div">
+                    <p class="text-center" style="text-transform: capitalize;">Submit</p>
+                </div>
+            </button><br>
+            <a href="{% url 'studentRegisterView' %}">For new register click here</a><br><br><br>
+        </div>
+    </div>
+</form>
+<br><br><br><br><br><br><br><br>
+{% else %}
+<div class="container">
+    <div class="alert alert-danger mt-2" role="alert">
+        This url didn't open for you
+    </div>
+</div>
+{% endif %}
+{% endblock %}

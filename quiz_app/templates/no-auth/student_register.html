@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block context %}
+{% if not user.is_authenticated %}
+<form action="">
+    {% csrf_token %}
+    <div class="next_nav">
+        <div class="container">
+            <p class="about_h2">Student register</p>
+        </div>
+    </div>
+    <div class="row tutor_row student_login">
+        <div class="col-9 tutor_login_main student_register">
+            <div class="tutor_div">
+                <p class="text-center" style="text-transform: capitalize;">Add new user</p>
+            </div>
+            <div class="student_details">
+                <h3>Student Login Details</h3>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="first_name">First Name</label>
+                            <input type="text" class="form-control" id="first_name" placeholder="User First Name">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="last_name">Last Name</label>
+                            <input type="text" class="form-control" id="last_name" placeholder="User Last Name">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="username">Login ID</label>
+                            <input type="text" class="form-control" id="username" placeholder="Username">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="User Password">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="confirm_password">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirm_password" placeholder="Confirm Password">
+                        </div>
+                    </div>
+                </div>
+                <h3>Student Personal Details</h3>
+                <hr>
+                <!-- <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="first_name">First Name</label>
+                            <input type="text" class="form-control" id="first_name" placeholder="User First Name">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="last_name">Last Name</label>
+                            <input type="text" class="form-control" id="last_name" placeholder="User Last Name">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="username">Login ID</label>
+                            <input type="text" class="form-control" id="username" placeholder="Username">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="User Password">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="confirm_password">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirm_password" placeholder="Confirm Password">
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</form>
+<br><br><br><br><br><br><br><br>
+{% else %}
+<div class="container">
+    <div class="alert alert-danger mt-2" role="alert">
+        This url didn't open for you
+    </div>
+</div>
+{% endif %}
+{% endblock %}
