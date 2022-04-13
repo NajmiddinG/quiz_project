@@ -48,9 +48,6 @@ nav {
 .footer {
     background-color: rgb(42, 88, 94);
 }
-.about_h2 {
-    text-transform: uppercase;
-}
 .fw-600 {
     font-weight: 600;
 }
@@ -75,11 +72,19 @@ a {
     margin-top: -4px;
 }
 .about_h2 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     padding-block: 10px;
     padding-inline: 12%;
     color: white;
+    text-transform: uppercase;
+}
+.about_h2_ {
+    font-size: 20px;
+    font-weight: 600;
+    padding-block: 10px;
+    padding-inline: 12%;
+    text-transform: uppercase;
 }
 .tutor_login_main {
     margin: 0 auto;
@@ -125,24 +130,30 @@ a {
 }
 /* Tutor login */
 /* Main Panel */
-.dashboard-container .row .main-col {
-    border: 1px solid rgb(44, 42, 42);
-    height: 10rem;
-    margin: -0.50px;
+.dashboard-container {
+    margin-top: 5%;
 }
-.dashboard-container .row .main-col .mainbc {
+.dashboard-container .row {
+    height: auto;
+    margin-left: 1px;
+}
+.dashboard-container .main-col {
+    height: 150px;
+    border: 1px solid black;
+    margin: -0.5px;
+}
+.dashboard-container .circle {
     background-color: rgb(42, 88, 94);
+    width: 120px;
+    height: 120px;
+    margin: 10% auto;
     border-radius: 50%;
-    margin: 10%;
-    height: 80%;
-    position: relative;
 }
-.mainwhite {
-    color: white;
-}
-.dashboard-container .row .main-col .mainbc a>p {
-    padding: 50%;
-    z-index: 1;
+.dashboard-container .circle a {
+    display: block;
+    padding-block: 35%;
+    width: 110px;
+    color: aliceblue;
 }
 /* About */
 .about_row {
@@ -221,10 +232,6 @@ a {
 .student_login a:hover {
     text-decoration: underline;
 }
-/* .student_register {
-    width: 70%;
-    margin: 1.5% auto;
-} */
 .student_register label {
     font-size: 16px;
     font-weight: 500;
@@ -240,4 +247,19 @@ a {
 }
 .student_register .form-group input {
     height: 45px;
+}
+.student_register .student_button_1 {
+    border: 0;
+    padding-top: 10px;
+    background-color: transparent;
+    margin: 0 auto;
+}
+
+.active_navbar {
+    color: rgb(31, 94, 211) !important;
+}
+/* add topics */
+
+.add_topics .form-group {
+    margin: 30px !important;
 }
