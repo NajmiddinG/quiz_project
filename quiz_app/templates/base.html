@@ -25,44 +25,48 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Dashboard</a>
+                    <li class="nav-item">
+                        <a class="nav-link active_navbar" href="{% url 'dashboardTutor' %}">Dashboard</a>
                     </li>
+
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Administrator
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                            <li><a class="dropdown-item" href="#">Add Topics</a></li>
+                            <li><a class="dropdown-item" href="#">Add Course</a></li>
+                            <li><a class="dropdown-item" href="#">Add Question</a></li>
+                            <li><a class="dropdown-item" href="#">Add Users</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink2"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Reports
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                            <li><a class="dropdown-item" href="#">Tutors Report</a></li>
+                            <li><a class="dropdown-item" href="#">Student Report</a></li>
+                            <li><a class="dropdown-item" href="#">Question Report</a></li>
+                            <li><a class="dropdown-item" href="#">Result Report</a></li>
+                            <li><a class="dropdown-item" href="#">Course Report</a></li>
+                            <li><a class="dropdown-item" href="#">Topic Report</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink3"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             My Account
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink3">
+                            <li><a class="dropdown-item" href="#">My Account</a></li>
+                            <li><a class="dropdown-item" href="#">Change Password</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Welcome admin admin</a>
@@ -109,6 +113,7 @@
     {% block context %}
 
     {% endblock %}
+    {% if not user.is_authenticated %}
     <div class="footer">
         <div class="container-xl">
             <div class="row">
@@ -140,6 +145,7 @@
             </div>
         </div>
     </div>
+    {% endif %}
     <script src="{% static 'js/bootstrap.js' %}"></script>
 </body>
 

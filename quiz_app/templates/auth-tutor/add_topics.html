@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block context %}
+{% if user.is_authenticated %}
+<div class="next_nav">
+    <div class="container">
+        <p class="about_h2">Add topic</p>
+    </div>
+</div>
+<form action="">
+    {% csrf_token %}
+    <div class="row tutor_row add_topics">
+        <div class="col-9 tutor_login_main">
+            <div class="tutor_div">
+                <p class="text-center">Add New Topic</p>
+            </div>
+
+            <div class="form-group" style="padding-inline: 5%;">
+                <label for="course">Select Course</label>
+                <select name="select_course" class="form-control" id="course" style="padding-left: 3.1%;">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                </select>
+            </div>
+            <div class="form-group" style="padding-inline: 5%;">
+                <label for="topic_name">Topic Name</label>
+                <input type="text" name="topic_name" class="form-control" id="topic_name" placeholder="Topic Name">
+            </div>
+            <div class="form-group" style="padding-inline: 5%;">
+                <label for="level">Select Level</label>
+                <select name="select_level" class="form-control" id="level" style="padding-left: 4%;">
+                    <option value="">High</option>
+                    <option value="">Medium</option>
+                    <option value="">Lower</option>
+                </select>
+            </div>
+            <div class="form-group" style="padding-inline: 5%;">
+                <label for="description">Preparation Of The Topic</label>
+                <textarea class="form-control" id="description" rows="8" placeholder="Description"></textarea>
+            </div>
+            <br>
+        </div>
+    </div>
+</form>
+{% else %}
+<div class="container">
+    <div class="alert alert-danger mt-2" role="alert">
+        This url didn't open for you
+    </div>
+</div>
+{% endif %}
+{% endblock %}

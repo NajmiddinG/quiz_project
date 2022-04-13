@@ -1,83 +1,105 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block context %}
-
-<div class="container dashboard-container">
-    <div class="row">
-        <div class="col main-col">
-            <div class="mainbc">
-                <a href="//"><p class="mainwhite">Add Topics</p></a>
-            </div>
-        </div>
-        <div class="col main-col">
-            <div class="mainbc">
-                <a href="//"><p class="mainwhite">Add Course</p></a>
-            </div>
-        </div>
-        <div class="col main-col">
-            <div class="mainbc">
-                <a href="//"><p class="mainwhite">Add Questions</p></a>
-            </div>
-        </div>
-        <div class="col main-col">
-            <div class="mainbc">
-                <a href="//"><p class="mainwhite">Add Users</p></a>
-            </div>
-        </div>
-        <div class="col main-col">
-            <div class="mainbc">
-                <a href="//"><p class="mainwhite">Tutors Report</p></a>
-            </div>
-        </div>
-        <div class="col main-col">
-            <div class="mainbc">
-                <a href="//"><p class="mainwhite">Studets Report</p></a>
-            </div>
-        </div>
+{% if user.is_authenticated %}
+<div class="next_nav">
+    <div class="container">
+        <p class="about_h2">Tutor dashboard</p>
     </div>
-    <div class="row">
-        <div class="col main-col">
-            <div class="mainbc">
-                <a href="//"><p class="mainwhite">Questions report</p></a>
+</div>
+<div class="container dashboard-container">
+    <div class="row align-items-center">
+        <div class="col-lg-2 col-md-4 col-6 main-col">
+            <div class="circle">
+                <center>
+                    <a class="mainwhite" href="{% url 'addTopicsTutor' %}">Add Topics</a>
+                </center>
             </div>
         </div>
-        <div class="col main-col">
-            <div class="mainbc">
-                <a href="//"><p class="mainwhite">Results Report</p></a>
+        <div class="col-lg-2 col-md-4 col-6 main-col">
+            <div class="circle">
+                <center>
+                    <a class="mainwhite" href="//">Add Course</a>
+                </center>
             </div>
         </div>
-        <div class="col main-col">
-            <div class="mainbc">
-                <a href="//"><p class="mainwhite">Topics Report</p></a>
+        <div class="col-lg-2 col-md-4 col-6 main-col">
+            <div class="circle">
+                <center>
+                    <a class="mainwhite" href="//">Add Questions</a>
+                </center>
             </div>
         </div>
-        <div class="col main-col">
-            <div class="mainbc">
-                <a href="//"><p class="mainwhite">My Account</p></a>
+        <div class="col-lg-2 col-md-4 col-6 main-col">
+            <div class="circle">
+                <center>
+                    <a class="mainwhite" href="//">Add Users</a>
+                </center>
             </div>
         </div>
-        <div class="col main-col">
-            <div class="mainbc">
-                <a href="//"><p class="mainwhite">Change Password</p></a>
+        <div class="col-lg-2 col-md-4 col-6 main-col">
+            <div class="circle">
+                <center>
+                    <a class="mainwhite" href="//">Tutors Report</a>
+                </center>
             </div>
         </div>
-        <div class="col main-col">
-            <div class="mainbc">
-                <a href="//"><p class="mainwhite">Logogut</p></a>
+        <div class="col-lg-2 col-md-4 col-6 main-col">
+            <div class="circle">
+                <center>
+                    <a class="mainwhite" href="//">Studets Report</a>
+                </center>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 main-col">
+            <div class="circle">
+                <center>
+                    <a class="mainwhite" href="//">Questions Report</a>
+                </center>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 main-col">
+            <div class="circle">
+                <center>
+                    <a class="mainwhite" href="//">Results Report</a>
+                </center>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 main-col">
+            <div class="circle">
+                <center>
+                    <a class="mainwhite" href="//">Topics Report</a>
+                </center>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 main-col">
+            <div class="circle">
+                <center>
+                    <a class="mainwhite" href="//">My Account</a>
+                </center>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 main-col">
+            <div class="circle">
+                <center>
+                    <a class="mainwhite" href="//">Change Password</a>
+                </center>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 main-col">
+            <div class="circle">
+                <center>
+                    <a class="mainwhite" href="//">Logout</a>
+                </center>
             </div>
         </div>
     </div>
 </div>
-
-
-
-{% if not user.is_authenticated %}
-Hello
 {% else %}
 <div class="container">
     <div class="alert alert-danger mt-2" role="alert">
         This url didn't open for you
-      </div>
+    </div>
 </div>
 {% endif %}
 {% endblock %}

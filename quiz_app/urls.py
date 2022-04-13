@@ -10,7 +10,6 @@ urlpatterns = [
     path('student-register', views.studentRegisterView, name='studentRegisterView'),
     path('tutor-login/', views.tutorLoginView, name='tutorLoginView'),
     # auth tutor
-    path('dashboard-tutor/', views.dashboardTutorView, name='dashboardTutorView'),
     path('add-course-tutor', views.addCourseTutorView, name='addCourseTutor'),
     path('add-question-tutor', views.addQuestionTutorView, name='addQuestionTutor'),
     path('add-topics-tutor', views.addTopicsTutorView, name='addTopicsTutor'),
@@ -24,6 +23,5 @@ urlpatterns = [
     path('student-report-tutor', views.studentReportTutorView, name='studentReportTutor'),
     path('topic-report-tutor', views.topicReportTutorView, name='topicReportTutor'),
     path('tutor-report-tutor', views.tutorReportTutorView, name='tutorReportTutor'),
-    path('dashboard-tutor', views.dashboardTutorView, name='dashboardTutor'),
     path('dashboard-tutor', views.dashboardTutorView, name='dashboardTutor'),
 ]
