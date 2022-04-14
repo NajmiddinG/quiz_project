@@ -36,7 +36,7 @@ def changePasswordTutorView(request):
     return render(request, 'auth-tutor/change_password.html')
 
 def courseReportTutorView(request):
-    return render(request, 'auth-tutor/course-_eport.html')
+    return render(request, 'auth-tutor/course_report.html')
 
 def dashboardTutorView(request):
     return render(request, 'auth-tutor/dashboard.html')

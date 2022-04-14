@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block context %}
+{% if user.is_authenticated %}
+<div class="next_nav">
+    <div class="container">
+        <p class="about_h2">Course Details</p>
+    </div>
+</div>
+<form action="">
+    {% csrf_token %}
+    <div class="show_search row">
+        <div class="col col1">Show <input type="text" name="entries" value="10" id="entries"> entries</div>
+        <div class="col col2">Search: <input type="text" name="search" id="search"></div>
+    </div>
+    <table class="course_table table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Se_No</th>
+                <th>Course Name</th>
+                <th>Course Description</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Python</td>
+                <td>Higher Language</td>
+                <td><button class="btn btn-danger">Delete</button> <button class="btn btn-info">Edit</button></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Python</td>
+                <td>Higher Language</td>
+                <td><button class="btn btn-danger">Delete</button> <button class="btn btn-info">Edit</button></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Python</td>
+                <td>Higher Language</td>
+                <td><button class="btn btn-danger">Delete</button> <button class="btn btn-info">Edit</button></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Python</td>
+                <td>Higher Language</td>
+                <td><button class="btn btn-danger">Delete</button> <button class="btn btn-info">Edit</button></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+{% else %}
+<div class="container">
+    <div class="alert alert-danger mt-2" role="alert">
+        This url didn't open for you
+    </div>
+</div>
+{% endif %}
+{% endblock %}

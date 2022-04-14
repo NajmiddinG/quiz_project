@@ -1,12 +1,15 @@
-<!-- {% extends 'base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block context %}
 {% if user.is_authenticated %}
 <div class="next_nav">
     <div class="container">
-        <p class="about_h2">Salom</p>
+        <p class="about_h2">Add users</p>
     </div>
 </div>
+<form action="">
+    {% csrf_token %}
+</form>
 {% else %}
 <div class="container">
     <div class="alert alert-danger mt-2" role="alert">
@@ -14,4 +17,4 @@
     </div>
 </div>
 {% endif %}
-{% endblock %} -->
+{% endblock %}
