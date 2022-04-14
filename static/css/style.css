@@ -225,7 +225,7 @@ a {
 .student_div > p {
     font-size: 16px;
     padding-block: 10px;
-    padding-inline: 12%;
+    
     color: white;
     text-transform: uppercase;
 }
@@ -261,5 +261,21 @@ a {
 /* add topics */
 
 .add_topics .form-group {
-    margin: 30px !important;
+    margin-block: 10px !important;
+}
+/* Course details */
+.show_search {
+    margin: 1% auto;
+    width: 80%;
+}
+.show_search .col2 {
+    text-align: end;
+}
+.show_search .col1, .show_search .col2 {
+    font-weight: 600;
+}
+.course_table {
+    margin: 1% auto;
+    width: 90%;
+    /* background-color: red; */
 }

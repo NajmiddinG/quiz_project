@@ -23,5 +23,4 @@ urlpatterns = [
     path('student-report-tutor', views.studentReportTutorView, name='studentReportTutor'),
     path('topic-report-tutor', views.topicReportTutorView, name='topicReportTutor'),
     path('tutor-report-tutor', views.tutorReportTutorView, name='tutorReportTutor'),
-    path('dashboard-tutor', views.dashboardTutorView, name='dashboardTutor'),
 ]

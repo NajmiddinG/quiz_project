@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block context %}
+{% if user.is_authenticated %}
+<div class="next_nav">
+    <div class="container">
+        <p class="about_h2">My result</p>
+    </div>
+</div>
+<form action="">
+    {% csrf_token %}
+</form>
+{% else %}
+<div class="container">
+    <div class="alert alert-danger mt-2" role="alert">
+        This url didn't open for you
+    </div>
+</div>
+{% endif %}
+{% endblock %}
