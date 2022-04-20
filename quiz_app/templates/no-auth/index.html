@@ -1,11 +1,21 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block context %}
+{% load users_difference %}
+{% if user_cookie|my_create_cookie == 3 or user_cookie|my_create_cookie == -1 %}
+{% if user_cookie|my_create_cookie == -1 %}
+<script>
+  const d = new Date();
+  d.setTime(d.getTime() + (1*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = 'user' + "=" + 'no_auth' + ";" + expires + ";path=/";
+</script>
+{% endif %}
 <div class="container">
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="3000">
-            <img src="{% static 'img/main1.jpg' %}" class="d-block w-100" alt="...">
+            <img src="{% static 'img/main2.jpg' %}" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item" data-bs-interval="3000">
             <img src="{% static 'img/main2.jpg' %}" class="d-block w-100" alt="...">
@@ -62,7 +72,7 @@
 <div class="container">
     <div class="row">
         <div class="col-4 text-center">
-            <img src="{% static 'img/main2.jpg' %}" width="100%" alt="Main img">
+            <img src="{% static 'img/main1.jpg' %}" width="100%" alt="Main img">
         </div>
         <div class="col-8  text-center">
             <h2 class="about_h2_">About online quiz system</h2>
@@ -77,4 +87,11 @@
     </div>
 </div>
 <br>
+{% else %}
+<div class="container">
+    <div class="alert alert-danger mt-2" role="alert">
+        This url didn't open for you
+      </div>
+</div>
+{% endif %}
 {% endblock %}

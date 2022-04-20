@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block context %}
-{% if not user.is_authenticated %}
+{% load users_difference %}
+{% if user_cookie|my_create_cookie == 3 %}
 <form action="">
     {% csrf_token %}
     <div class="next_nav">
@@ -21,7 +22,7 @@
                     <p class="text-center" style="text-transform: capitalize;">Submit</p>
                 </div>
             </button><br>
-            <a href="{% url 'studentRegisterView' %}">For new register click here</a><br><br><br>
+            <a href="{% url 'studentRegister' %}">For new register click here</a><br><br><br>
         </div>
     </div>
 </form>

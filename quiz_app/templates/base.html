@@ -1,4 +1,5 @@
 {% load static %}
+{% load users_difference %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,11 +14,10 @@
 
 <body>
     <div class="main_nav">
-
-        {% if user.is_authenticated %}
+        {% if user_cookie|my_create_cookie == 1 %}
         <!--  -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100">&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="navbar-brand" href="#">ONLINE QUIZ SYSTEM</a>
+            <a class="navbar-brand" href="{% url 'dashboardTutor' %}">ONLINE QUIZ SYSTEM</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -79,9 +79,57 @@
         </nav>
         <!--  -->
         {% endif %}
-        {% if not user.is_authenticated %}
+        {% if user_cookie|my_create_cookie == 2 %}
+        <!--  -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100">&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="navbar-brand" href="{% url 'indexView' %}">ONLINE QUIZ SYSTEM</a>
+            <a class="navbar-brand" href="{% url 'dashboardStudent' %}">ONLINE QUIZ SYSTEM</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active_navbar" href="{% url 'dashboardStudent' %}">Dashboard</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            My Administrator
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                            <li><a class="dropdown-item" href="{% url 'courseListStudent' %}">Course List</a></li>
+                            <li><a class="dropdown-item" href="{% url 'myResultStudent' %}">My Result</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink3"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            My Account
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink3">
+                            <li><a class="dropdown-item" href="{% url 'myAccountStudent' %}">My Account</a></li>
+                            <li><a class="dropdown-item" href="{% url 'changePasswordStudent' %}">Change Password</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Welcome admin name</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--  -->
+        {% endif %}
+        {% if user_cookie|my_create_cookie == 3 or user_cookie|my_create_cookie == -1 %}
+        <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100">&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="navbar-brand" href="{% url 'index' %}">ONLINE QUIZ SYSTEM</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -90,19 +138,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'indexView' %}">Home</a>
+                        <a class="nav-link" href="{% url 'index' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'aboutView' %}">About</a>
+                        <a class="nav-link" href="{% url 'about' %}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contactView' %}">Contact</a>
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'studentLoginView' %}">Student login</a>
+                        <a class="nav-link" href="{% url 'studentLogin' %}">Student login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'tutorLoginView' %}">Tutor login</a>
+                        <a class="nav-link" href="{% url 'tutorLogin' %}">Tutor login</a>
                     </li>
                 </ul>
             </div>
@@ -113,7 +161,7 @@
     {% block context %}
 
     {% endblock %}
-    {% if not user.is_authenticated %}
+    {% if user_cookie|my_create_cookie == 3 %}
     <div class="footer">
         <div class="container-xl">
             <div class="row">
