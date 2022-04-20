@@ -9,6 +9,138 @@
 </div>
 <form action="">
     {% csrf_token %}
+    <div class="row tutor_row student_login">
+        <div class="col-9 tutor_login_main student_register">
+            <div class="tutor_div">
+                <p class="text-center" style="text-transform: capitalize;">Add new user</p>
+            </div>
+            <div class="student_details">
+                <div class="form-group col-lg-6 col-sm-12">
+                    <label for="course">Select User Role</label>
+                    <select name="select_course" class="form-control" id="course" style="padding-left: 3.1%;">
+                        <option value="1">Tutor</option>
+                        <option value="2">Student</option>
+                    </select>
+                </div>
+                <h4>User Login Details</h4>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="first_name">First Name</label>
+                            <input type="text" class="form-control" id="first_name" placeholder="User First Name">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="last_name">Last Name</label>
+                            <input type="text" class="form-control" id="last_name" placeholder="User Last Name">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="username">Login ID</label>
+                            <input type="text" class="form-control" id="username" placeholder="Username">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="User Password">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="confirm_password">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirm_password"
+                                placeholder="Confirm Password">
+                        </div>
+                    </div>
+                </div>
+                <h4>User Personal Details</h4>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="">Gender</label><br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1" style="padding: 2px; height:15px">
+                                <label class="form-check-label" for="inlineRadio1">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="option2" style="padding: 2px; height:15px">
+                                <label class="form-check-label" for="inlineRadio2">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="user_email">User Email</label>
+                            <input type="email" class="form-control" id="user_email" placeholder="User Email">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="user_mobile">User Mobile</label>
+                            <input type="text" class="form-control" id="user_mobile" placeholder="User Mobile">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="user_date_of_birth">User Date Of Birth</label>
+                            <input type="date" class="form-control" id="user_date_of_birth"
+                                placeholder="User Date Of Birth">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="user_address_line_1">User Address Line 1</label>
+                            <input type="text" class="form-control" id="user_address_line_1"
+                                placeholder="User Address Line 1">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="user_address_line_2">User Address Line 2</label>
+                            <input type="text" class="form-control" id="user_address_line_2"
+                                placeholder="User Address Line 2">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="user_city">User City</label>
+                            <input type="text" class="form-control" id="user_city" placeholder="User City">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="user_state">User State</label>
+                            <input type="text" class="form-control" id="user_state" placeholder="User State">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="user_country">User Country</label>
+                            <input type="text" class="form-control" id="user_country" placeholder="User Country">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="user_picture">User Picture</label><br>
+                            <input type="file" style="margin-left: -30px">
+                        </div>
+                    </div>
+                    <button type="submit" class="col-8 student_button_1">
+                        <div class="student_div">
+                            <p class="text-center" style="text-transform: capitalize;">Submit</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </form>
 {% else %}
 <div class="container">

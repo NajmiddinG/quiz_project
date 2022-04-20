@@ -4,11 +4,60 @@
 {% if user.is_authenticated %}
 <div class="next_nav">
     <div class="container">
-        <p class="about_h2">Topic report</p>
+        <p class="about_h2">Topic Details</p>
     </div>
 </div>
 <form action="">
     {% csrf_token %}
+    <div class="show_search row">
+        <div class="col col1">Show <input type="text" name="entries" value="10" id="entries" style="width: 40px;"> entries</div>
+        <div class="col col2">Search: <input type="text" name="search" id="search"></div>
+    </div>
+    <table class="course_table table table-striped table-bordered">
+        <thead>
+            <tr style="background-color: rgb(42, 88, 94); color: white;">
+                <th>Se_No <span class="order_topic_id"></span></th>
+                <th>Topics Name <span class="order_topic_name"></span></th>
+                <th>Level <span class="level_topic_report"></span></th>
+                <th>Topic Description <span class="order_topic_description"></span></th>
+                <th>Action <span class="order_topic_action"></span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Array</td>
+                <td>Low</td>
+                <td>It is the collection of Similar type of object</td>
+                <td><button class="btn btn-danger">Delete</button> <button class="btn btn-warning" style="color: white;">Edit</button></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Array</td>
+                <td>Low</td>
+                <td>It is the collection of Similar type of object</td>
+                <td><button class="btn btn-danger">Delete</button> <button class="btn btn-warning" style="color: white;">Edit</button></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Array</td>
+                <td>Low</td>
+                <td>It is the collection of Similar type of object</td>
+                <td><button class="btn btn-danger">Delete</button> <button class="btn btn-warning" style="color: white;">Edit</button></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Array</td>
+                <td>Low</td>
+                <td>It is the collection of Similar type of object. It is the collection of Similar type of object.</td>
+                <td><button class="btn btn-danger">Delete</button> <button class="btn btn-warning" style="color: white;">Edit</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="show_search row" style="font-weight: 500;">
+        <div class="col-3 col1">Showing 1 to 7 of 7 entries</div>
+        <div class="col col2">Previous 1 Next</div>
+    </div>
 </form>
 {% else %}
 <div class="container">
