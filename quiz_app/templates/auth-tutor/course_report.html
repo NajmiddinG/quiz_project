@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block context %}
-{% if user.is_authenticated %}
+{% load users_difference %}
+{% if user_cookie|my_create_cookie == 1 %}
 <div class="next_nav">
     <div class="container">
         <p class="about_h2">Course Details</p>
