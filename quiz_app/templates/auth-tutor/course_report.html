@@ -10,16 +10,16 @@
 <form action="">
     {% csrf_token %}
     <div class="show_search row">
-        <div class="col col1">Show <input type="text" name="entries" value="10" id="entries"> entries</div>
+        <div class="col col1">Show <input type="text" name="entries" value="10" id="entries" style="width: 40px;"> entries</div>
         <div class="col col2">Search: <input type="text" name="search" id="search"></div>
     </div>
     <table class="course_table table table-striped table-bordered">
         <thead>
-            <tr>
-                <th>Se_No</th>
-                <th>Course Name</th>
-                <th>Course Description</th>
-                <th>Action</th>
+            <tr style="background-color: rgb(42, 88, 94); color: white;">
+                <th>Se_No <span class="order_course_id"></span></th>
+                <th>Course Name <span class="order_course_name"></span></th>
+                <th>Course Description <span class="order_course_description"></span></th>
+                <th>Action <span class="order_course_action"></span></th>
             </tr>
         </thead>
         <tbody>
@@ -27,28 +27,32 @@
                 <td>1</td>
                 <td>Python</td>
                 <td>Higher Language</td>
-                <td><button class="btn btn-danger">Delete</button> <button class="btn btn-info">Edit</button></td>
+                <td><button class="btn btn-danger">Delete</button> <button class="btn btn-warning" style="color: white;">Edit</button></td>
             </tr>
             <tr>
                 <td>1</td>
                 <td>Python</td>
                 <td>Higher Language</td>
-                <td><button class="btn btn-danger">Delete</button> <button class="btn btn-info">Edit</button></td>
+                <td><button class="btn btn-danger">Delete</button> <button class="btn btn-warning" style="color: white;">Edit</button></td>
             </tr>
             <tr>
                 <td>1</td>
                 <td>Python</td>
                 <td>Higher Language</td>
-                <td><button class="btn btn-danger">Delete</button> <button class="btn btn-info">Edit</button></td>
+                <td><button class="btn btn-danger">Delete</button> <button class="btn btn-warning" style="color: white;">Edit</button></td>
             </tr>
             <tr>
                 <td>1</td>
                 <td>Python</td>
                 <td>Higher Language</td>
-                <td><button class="btn btn-danger">Delete</button> <button class="btn btn-info">Edit</button></td>
+                <td><button class="btn btn-danger">Delete</button> <button class="btn btn-warning" style="color: white;">Edit</button></td>
             </tr>
         </tbody>
     </table>
+    <div class="show_search row" style="font-weight: 500;">
+        <div class="col-3 col1">Showing 1 to 7 of 7 entries</div>
+        <div class="col col2">Previous 1 Next</div>
+    </div>
 </form>
 {% else %}
 <div class="container">

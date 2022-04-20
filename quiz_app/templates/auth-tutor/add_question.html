@@ -9,6 +9,58 @@
 </div>
 <form action="">
     {% csrf_token %}
+    <div class="row tutor_row add_topics">
+        <div class="col-9 tutor_login_main">
+            <div class="tutor_div">
+                <p class="text-center" style="text-transform: capitalize;">Add new question</p>
+            </div>
+
+            <div class="form-group col-8" style="padding-inline: 5%;">
+                <label for="course">Select Course</label>
+                <select name="select_course" class="form-control" id="course" style="padding-left: 3.1%;">
+                    <option value="1">Exception handling[Java1]</option>
+                    <option value="2">Exception handling[Java2]</option>
+                    <option value="3">Exception handling[Java3]</option>
+                    <option value="4">Exception handling[Java4]</option>
+                    <option value="5">Exception handling[Java5]</option>
+                </select>
+            </div>
+            <div class="form-group col-8" style="padding-inline: 5%;">
+                <label for="full_question">Full Question</label>
+                <input type="text" name="full_question" class="form-control" id="full_question" placeholder="Full Question ...">
+            </div>
+            <div class="row" style="padding-inline: 5%;">
+                <div class="form-group col">
+                    <label for="option1">Option 1</label>
+                    <input type="text" name="option1" class="form-control" id="option1" placeholder="Option 1">
+                </div>
+                <div class="form-group col">
+                    <label for="option2">Option 2</label>
+                    <input type="text" name="option2" class="form-control" id="option2" placeholder="Option 2">
+                </div>
+            </div>
+            <div class="row" style="padding-inline: 5%;">
+                <div class="form-group col">
+                    <label for="option3">Option 3</label>
+                    <input type="text" name="option3" class="form-control" id="option3" placeholder="Option 3">
+                </div>
+                <div class="form-group col">
+                    <label for="option4">Option 4</label>
+                    <input type="text" name="option4" class="form-control" id="option4" placeholder="Option 4">
+                </div>
+            </div>
+            <div class="form-group col-8" style="padding-inline: 5%;">
+                <label for="answer">Answer</label>
+                <input type="text" name="answer" class="form-control" id="answer" placeholder="Answer">
+            </div>
+            <button type="submit" class="col-8 student_button_1">
+                <div class="student_div text-center" style="margin-left: 20%;">
+                    <p class="text-center" style="text-transform: capitalize;">Submit</p>
+                </div>
+            </button>
+            <br>
+        </div>
+    </div>
 </form>
 {% else %}
 <div class="container">
